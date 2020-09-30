@@ -1,7 +1,8 @@
 // https://leetcode.com/problems/target-sum/
 class target-sum {
-   //tc - n*sum because at each index we calculate every possible sum at most once
-   //sc - n - recursion tree will go till array length
+     // tc -> n*r where r is the range of every possible sum
+    // sc-> n*r recursion tree will go till array length 
+    // and cache may contain n*r elements
    public int findTargetSumWays(int[] nums, int S) {
        return getFindTargetSum(nums, 0, S, 0,
                                new HashMap<String, Integer>());
